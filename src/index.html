@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- boc icon -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- flowbind -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+  <title>Car Rental</title>
+</head>
+
+<body class="body dark:bg-black">
+
+  <header class="shadow-sm">
+    <nav class="container h-24 flex items-center justify-between">
+      <div class=" flex gap-9">
+        <div class="nav__logo">
+          <img src="./images/Logo.png" alt="">
+        </div>
+
+        <ul class="nav__menu flex items-center justify-between h-11 w-[446px]">
+          <li class="nav__menu--item flex items-center px-4 h-11 hover:bg-[#F5F5F5] rounded-[100px] cursor-pointer">
+            <a href="#" class="dark:text-white">Categories</a>
+          </li>
+
+          <li class="nav__menu--item flex items-center ">
+            <button id="aboutus" data-dropdown-toggle="about" data-dropdown-trigger="hover"
+              class=" hover:bg-[#F5F5F5]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[100px] text-md h-11 px-4 text-center inline-flex items-center dark:hover:bg-[#F5F5F5] dark:text-white"
+              type="button">
+              About Us
+              <i class='bx bx-chevron-down text-[25px]'></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="about"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2 text-sm dark:text-gray-200" aria-labelledby="aboutus">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 rounded-[100px] hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">News</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 rounded-[100px] hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Careers</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 rounded-[100px] hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Locations</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </li>
+
+          <li class="nav__menu--item flex items-center justify-center ">
+
+            <button id="helpcenter" data-dropdown-toggle="help" data-dropdown-trigger="hover"
+              class=" hover:bg-[#F5F5F5]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[100px] text-md h-11 px-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              type="button">
+              Help Center
+              <i class='bx bx-chevron-down text-[25px]'></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="help"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2 text-sm dark:text-gray-200" aria-labelledby="helpcenter">
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 rounded-[100px] hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">FAQ</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 rounded-[100px] hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Contact
+                    Us</a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav__btn flex items-center justify-between gap-8">
+        <p class="">+1 855 420 0000</p>
+        <div class="theme bg-[#F5F5F5] w-11 h-11 rounded-full flex items-center justify-center cursor-pointer">
+          <img src="./images/dark-theme.svg" alt="">
+        </div>
+        <button class="login h-11 w-28 bg-[#299764] rounded-full text-white ">
+          <span class="">Login</span>
+          <i class='bx bx-log-in max-w-4'></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main class="bg-green-200">
+
+    <!-- Main section -->
+    <section class="main">
+      <div class="container ">
+  
+        <div class="main__carusel relative mt-5 ">
+          <ul class="main__carusel--list">
+            <li class="main__carusel--list-img h-[500px] w-[1200px] relative ">
+              <img src="./images/compact-car.jpg" alt="Compact img" class="">
+             <div class="carusel__text absolute w-[416px] top-14 left-96 ">
+              <p class="text-white text-4xl text-center">Compact Cars</p>
+              <p class="text-white text-[16px] text-center">Rent cars as you are comfortable and where you are comfortable.</p>
+             </div>
+            </li>
+          </ul>
+
+          <ul class="carusel__main--indicator absolute top-[438px] left-10 flex w-14 items-center justify-between">
+            <li class="carusel__main--indicator-item bg-white/80 w-2 h-2 rounded-full "></li>
+            <li class="carusel__main--indicator-item bg-white/80 w-2 h-2 rounded-full "></li>
+            <li class="carusel__main--indicator-item bg-white/80 w-2 h-2 rounded-full "></li>
+          </ul>
+
+          <button class="carusel__left-btn absolute w-9 h-9 rounded-full bg-white right-[88px] top-[424px]">
+              <i class="bx bx-chevron-left text-3xl"></i>
+          </button>
+
+          <button class="carusel__left-btn absolute w-9 h-9 rounded-full bg-white right-10 top-[424px]">
+            <i class="bx bx-chevron-right text-3xl"></i>
+        </button>
+
+        <div class="main__search absolute bg-white w-[600px] h-[66px] left-[300px] rounded-full shadow-lg flex justify-between items-center top-[95%]">
+          
+          <input type="search" placeholder="Find the car of your dreams" class="w-full border-none rounded-l-full ml-2 focus:ring-0"> 
+
+          <div class="main__search-icon mr-2  w-[70px] h-[58px] flex items-center justify-center bg-[#299764] rounded-full">
+            <i class='bx bx-search-alt-2 text-white'></i>
+          </div>
+          
+        </div>
+          
+        </div>
+          
+        </div>
+
+      </div>
+    </section>
+    <!-- Main section finished -->
+
+    <!-- Dreams section started-->
+    <section class="dream">
+      <div class="container ">
+        <div class="dream__info mt-[133px] w-[500px] mx-auto text-center">
+          <p class="dream__info-title text-4xl font-medium">
+            Choose the car of your dreams
+          </p>
+          <p class="dream__info-text text-[16px] text-[#555555] ">
+            We provide our customers with the most incredible driving emotions. That is why there are only world-class cars in our fleet
+          </p>
+        </div>
+
+        <ul class="dream__menu mt-10 w-[476px] flex mx-auto items-center justify-between">
+         <li class="dream__menu-item w-[155px] compact h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white">Compact</li>
+         <li class="dream__menu-item w-[155px] sport h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white">Sport Cars</li>
+         <li class="dream__menu-item w-[155px] vans h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white">Vans</li>
+        </ul>
+
+        <ul class="dream__card mt-5 flex flex-wrap justify-between">
+          <!-- here card renders   -->
+        </ul>
+
+        <button type="button" class="view__all-cars bg-[#299764] w-[173px] h-[58px] rounded-full text-white mt-5 ml-[42%]">
+          Viev all cars
+        </button>
+      </div>
+    </section>
+    <!-- Dreams section finished-->
+
+    <!-- Comment section started -->
+    <section class="comment__section bg-[#F5F5F5] mt-40 py-[100px] ">
+      <div class="container">
+        <div class="comment w-[450px]">
+          <div class="comment__info flex flex-col px-20 bg-slate-400">
+
+            <div class="comment__info-logo flex items-center gap-4">
+              <div class="comment__info--logo-icon bg-white w-5 h-5 rounded-full flex items-center justify-center cursor-pointer">
+                <img src="./images/google.svg" alt="">
+              </div>
+              <p class="comment__info--logo-text text-[#4285F4]">From Google</p>
+            </div>
+
+            <p class="comment__info-title w-[280px] text-[38px] ">Hear what the community is saying</p>
+            <hr class="h-1 rounded-full bg-gradient-to-r from-[#EA4335] to-[#FBBC05] ">
+            <p>More interesting reviews on Instagram</p>
+            <button>instagram</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <div class="h-96"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <script src="./utils/utils.js"></script>
+  <script src="./scripts/cars.js"></script>
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/renders.js"></script>
+</body>
+
+
+</html>
