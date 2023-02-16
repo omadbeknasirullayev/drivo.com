@@ -1,6 +1,6 @@
 "use strict"
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".main__swipper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -11,5 +11,16 @@ var swiper = new Swiper(".mySwiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+});
+
+
+var swiper = new Swiper(".comment__swipper", {
+    slidesPerView: 1.7,
+    spaceBetween: 30,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
   });

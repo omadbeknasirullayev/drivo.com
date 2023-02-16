@@ -110,25 +110,40 @@
     <section class="main">
       <div class="container ">
 
-        <div class="main__carusel relative pt-5 ">
+        <div class="main__carusel relative pt-5">
           <!-- Swiper -->
-          <div class="swiper mySwiper">
+          <div class="swiper main__swipper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="./images/compact-car.jpg" alt="">
                 <div class="absolute top-16 w-[400px]">
                   <p class="text-white text-4xl ">Compact Cars</p>
-                  <p class="text-white/70 text-[16px]">Rent cars as you are comfortable and where you are comfortable.</p>
+                  <p class="text-white/70 text-[16px]">Rent cars as you are comfortable and where you are comfortable.
+                  </p>
                 </div>
 
               </div>
-              <div class="swiper-slide"><img src="./images/sport-cars.png" alt=""></div>
-              <div class="swiper-slide"><img src="./images/vans-car.jpg" alt=""></div>
+              <div class="swiper-slide">
+                <img src="./images/sport-cars.png" alt="">
+                <div class="absolute top-16 w-[400px]">
+                  <p class="text-white text-4xl ">Sports cars</p>
+                  <p class="text-white/70 text-[16px]">Rent cars as you are comfortable and where you are comfortable.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/vans-car.jpg" alt="">
+                <div class="absolute top-16 w-[400px]">
+                  <p class="text-white text-4xl ">Vans</p>
+                  <p class="text-white/70 text-[16px]">Rent cars as you are comfortable and where you are comfortable.
+                  </p>
+                </div>
+              </div>
 
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination "></div>
           </div>
 
           <div
@@ -147,7 +162,7 @@
           <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
           <!-- Initialize Swiper -->
-          
+
 
         </div>
 
@@ -158,8 +173,8 @@
     <!-- Main section finished -->
 
     <!-- Dreams section started-->
-    <section class="dream">
-      <div class="container ">
+    <section class="dream pb-40">
+      <div class="container">
         <div class="dream__info mt-[133px] w-[500px] mx-auto text-center">
           <p class="dream__info-title text-4xl font-medium">
             Choose the car of your dreams
@@ -195,30 +210,161 @@
     <!-- Dreams section finished-->
 
     <!-- Comment section started -->
-    <section class="comment__section bg-[#F5F5F5] mt-40 py-[100px] ">
-      <div class="container">
+    <section class="comment__section bg-[#F5F5F5]  py-[100px] ">
+      <div class="container flex">
         <div class="comment w-[450px]">
-          <div class="comment__info flex flex-col px-20 bg-slate-400">
+          <div class="comment__info flex flex-col px-20 py-16 ">
 
             <div class="comment__info-logo flex items-center gap-4">
               <div
                 class="comment__info--logo-icon bg-white w-5 h-5 rounded-full flex items-center justify-center cursor-pointer">
                 <img src="./images/google.svg" alt="">
               </div>
-              <p class="comment__info--logo-text text-[#4285F4]">From Google</p>
+              <p class="comment__info--logo-text text-[#4285F4] ">From Google</p>
             </div>
 
             <p class="comment__info-title w-[280px] text-[38px] ">Hear what the community is saying</p>
-            <hr class="h-1 rounded-full bg-gradient-to-r from-[#EA4335] to-[#FBBC05] ">
-            <p>More interesting reviews on Instagram</p>
-            <button>instagram</button>
+            <hr class="h-1 rounded-full bg-gradient-to-r my-8 from-[#EA4335] to-[#FBBC05] ">
+            <p class="text-[14px] text-[#555555]">More interesting reviews on Instagram</p>
+            <div
+              class="instagram w-48 h-11 flex items-center justify-center border border-spacing-1 border-red-200 rounded-full cursor-pointer">
+              <p class="instagram__link ">Instagram</p>
+            </div>
+
+
           </div>
         </div>
-      </div>
+
+        <div class="comment__carusel bg-[#299764] pt-16 pl-5 max-w-full overflow-hidden rounded-r-lg">
+          <!-- Swiper -->
+          <div class="swiper comment__swipper" id="comment__swipper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide flex-col">
+                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4">
+                  <img src="./images/nguyen.svg" alt="">
+                  <div class="mr-20">
+                    <p class="text-[16px] font-semibold ">Savannah Nguyen</p>
+                    <p class="text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+                  </div>
+                  <img src="./images/google.svg" alt="" class="w-[20px]">
+                </div>
+                <p class="text-[14px] w-[372px] text-left mt-4">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
+                  arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
+                  sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
+                  quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
+                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6">
+            
+                <div class=" comment__swipper-rate w-[372px] flex gap-3">
+                  <p>Star rating:</p>
+                  <ul class="flex items-center gap-3">
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                  </ul>
+                </div>
+            
+              </div>
+
+              <div class="swiper-slide flex-col">
+                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4">
+                  <img src="./images/nguyen.svg" alt="">
+                  <div class="mr-20">
+                    <p class="text-[16px] font-semibold ">Savannah Nguyen</p>
+                    <p class="text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+                  </div>
+                  <img src="./images/google.svg" alt="" class="w-[20px]">
+                </div>
+                <p class="text-[14px] w-[372px] text-left mt-4">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
+                  arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
+                  sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
+                  quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
+                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6">
+            
+                <div class=" comment__swipper-rate w-[372px] flex gap-3">
+                  <p>Star rating:</p>
+                  <ul class="flex items-center gap-3">
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                  </ul>
+                </div>
+            
+              </div>
+
+              <div class="swiper-slide flex-col">
+                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4">
+                  <img src="./images/nguyen.svg" alt="">
+                  <div class="mr-20">
+                    <p class="text-[16px] font-semibold ">Savannah Nguyen</p>
+                    <p class="text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+                  </div>
+                  <img src="./images/google.svg" alt="" class="w-[20px]">
+                </div>
+                <p class="text-[14px] w-[372px] text-left mt-4">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
+                  arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
+                  sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
+                  quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
+                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6">
+            
+                <div class=" comment__swipper-rate w-[372px] flex gap-3">
+                  <p>Star rating:</p>
+                  <ul class="flex items-center gap-3">
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                  </ul>
+                </div>
+            
+              </div>
+              <div class="swiper-slide flex-col">
+                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4">
+                  <img src="./images/nguyen.svg" alt="">
+                  <div class="mr-20">
+                    <p class="text-[16px] font-semibold ">Savannah Nguyen</p>
+                    <p class="text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+                  </div>
+                  <img src="./images/google.svg" alt="" class="w-[20px]">
+                </div>
+                <p class="text-[14px] w-[372px] text-left mt-4">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
+                  arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
+                  sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
+                  quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
+                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6">
+            
+                <div class=" comment__swipper-rate w-[372px] flex gap-3">
+                  <p>Star rating:</p>
+                  <ul class="flex items-center gap-3">
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star"></li>
+                  </ul>
+                </div>
+            
+              </div>
+      
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        </div>
     </section>
 
 
 
+
+    
 
 
 
