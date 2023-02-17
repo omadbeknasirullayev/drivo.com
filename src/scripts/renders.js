@@ -4,7 +4,7 @@ renderCars(compactCars)
 
 function renderCars (cars) {
   cars.forEach((item) => {
-      const card = createElement("li", "dream__card--item w-[387px]  bg-[#F5F5F5] rounded-2xl px-8 py-6 mb-5 hover:shadow-lg", 
+      const card = createElement("li", "dream__card--item w-[387px]  bg-[#F5F5F5] dark:bg-[#272727] rounded-2xl px-8 py-6 mb-5 hover:bg-[#299674] max-md:w-[320px] max-[830px]:w-[340px] ", 
       `
       <div class="dream__card--item-info">
             <p class="dream__card--item-title text-2xl font-semibold">${item.title}</p>

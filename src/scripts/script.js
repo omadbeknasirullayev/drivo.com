@@ -16,9 +16,10 @@ function changeTheme () {
     const theme = localStorage.getItem("theme")
 
     if (theme == "true") {
-        document.documentElement.classList.add("dark")
+        // document.body.style.cssText="background-color: black;"
+        document.documentElement.classList.add("mode")
     } else {
-        document.documentElement.classList.remove("dark")
+        document.documentElement.classList.remove("mode")
     }
     let k = document.querySelector("#aboutus")
     console.log(k.classList)

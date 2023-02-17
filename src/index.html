@@ -19,23 +19,23 @@
   <title>Car Rental</title>
 </head>
 
-<body class="body dark:bg-black">
+<body >
 
-  <header class="shadow-sm">
+  <header class="shadow-sm dark:border-b-2 dark:border-white">
     <nav class="container h-24 flex items-center justify-between">
       <div class=" flex gap-9">
         <div class="nav__logo">
           <img src="./images/Logo.png" alt="">
         </div>
 
-        <ul class="nav__menu flex items-center justify-between h-11 w-[446px]">
-          <li class="nav__menu--item flex items-center px-4 h-11 hover:bg-[#F5F5F5] rounded-[100px] cursor-pointer">
-            <a href="#" class="dark:text-white">Categories</a>
+        <ul class="nav__menu flex items-center justify-between h-11 w-[446px] max-md:hidden">
+          <li class="nav__menu--item flex items-center px-4 h-11 hover:bg-[#F5F5F5] rounded-[100px] cursor-pointer mode:text-white hover:text-black">
+            <span>Categories</span>
           </li>
 
           <li class="nav__menu--item flex items-center ">
             <button id="aboutus" data-dropdown-toggle="about" data-dropdown-trigger="hover"
-              class=" hover:bg-[#F5F5F5]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[100px] text-md h-11 px-4 text-center inline-flex items-center dark:hover:bg-[#F5F5F5] dark:text-white"
+              class=" hover:bg-[#F5F5F5]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[100px] text-md h-11 px-4 text-center inline-flex items-center dark:text-white hover:text-black"
               type="button">
               About Us
               <i class='bx bx-chevron-down text-[25px]'></i>
@@ -65,7 +65,7 @@
           <li class="nav__menu--item flex items-center justify-center ">
 
             <button id="helpcenter" data-dropdown-toggle="help" data-dropdown-trigger="hover"
-              class=" hover:bg-[#F5F5F5]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[100px] text-md h-11 px-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class=" hover:bg-[#F5F5F5]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[100px] text-md h-11 px-4 text-center inline-flex items-center dark:text-white hover:text-black"
               type="button">
               Help Center
               <i class='bx bx-chevron-down text-[25px]'></i>
@@ -90,9 +90,9 @@
         </ul>
       </div>
 
-      <div class="nav__btn flex items-center justify-between gap-8">
-        <p class="">+1 855 420 0000</p>
-        <div class="theme bg-[#F5F5F5] w-11 h-11 rounded-full flex items-center justify-center cursor-pointer">
+      <div class="nav__btn flex items-center justify-between gap-8 max-md:hidden">
+        <p class="max-lg:hidden">+1 855 420 0000</p>
+        <div class="theme bg-[#F5F5F5] w-11 h-11 rounded-full flex items-center justify-center cursor-pointer hover:bg-[#555555]/30 active:bg-[#299764]">
           <img src="./images/dark-theme.svg" alt="">
         </div>
         <button class="login h-11 w-28 bg-[#299764] rounded-full text-white ">
@@ -100,6 +100,49 @@
           <i class='bx bx-log-in max-w-4'></i>
         </button>
       </div>
+
+
+
+
+
+       <!-- Gamburger -->
+
+        <!-- <nav class="container flex justify-between px-4 py-8 mx-auto bg-white"> -->
+          
+         
+          <div class="hidden max-md:flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </nav>
   </header>
 
@@ -109,65 +152,72 @@
     <!-- Main section -->
     <section class="main">
       <div class="container ">
-
+  
         <div class="main__carusel relative pt-5">
           <!-- Swiper -->
           <div class="swiper main__swipper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="./images/compact-car.jpg" alt="">
-                <div class="absolute top-16 w-[400px]">
-                  <p class="text-white text-4xl ">Compact Cars</p>
-                  <p class="text-white/70 text-[16px]">Rent cars as you are comfortable and where you are comfortable.
+                <img src="./images/compact-cars.jpg" srcset="./images/compact-cars.jpg 1x ./images/compact-cars@2x.jpg 2x"
+                  alt="" class="max-md:w-[900px] max-md:h-[300px] max-[526px]:w-[400px] max-[526px]:h-[200px] rounded-lg">
+  
+                <div class="absolute top-16 w-[400px] text-center max-lg:top-10 max-[926px]:top-8 max-md:top-4 max-[526px]:w-[250px] max-[526px]:top-0">
+                  <p class="text-white text-4xl max-[526px]:text-[20px]">Compact Cars</p>
+                  <p class="text-white/70 text-[16px] max-[526px]:text-[11px]">Rent cars as you are comfortable and where
+                    you are comfortable.
                   </p>
                 </div>
-
+  
               </div>
               <div class="swiper-slide">
-                <img src="./images/sport-cars.png" alt="">
-                <div class="absolute top-16 w-[400px]">
-                  <p class="text-white text-4xl ">Sports cars</p>
-                  <p class="text-white/70 text-[16px]">Rent cars as you are comfortable and where you are comfortable.
+                <img src="./images/sport-cars.png" alt=""
+                class="max-md:w-[900px] max-md:h-[300px] max-[526px]:w-[400px] max-[526px]:h-[200px] rounded-lg"">
+                <div class="absolute top-16 w-[400px] text-center max-lg:top-10 max-[926px]:top-8 max-md:top-4 max-[526px]:w-[250px] max-[526px]:top-0">
+                  <p class="text-white text-4xl max-[526px]:text-[20px]">Sports cars</p>
+                  <p class="text-white/70 text-[16px] max-[526px]:text-[11px]">Rent cars as you are comfortable and where
+                    you are comfortable.
                   </p>
                 </div>
               </div>
               <div class="swiper-slide">
-                <img src="./images/vans-car.jpg" alt="">
-                <div class="absolute top-16 w-[400px]">
-                  <p class="text-white text-4xl ">Vans</p>
-                  <p class="text-white/70 text-[16px]">Rent cars as you are comfortable and where you are comfortable.
+                <img src="./images/vans-car.jpg" alt=""
+                class="max-md:w-[900px] max-md:h-[300px] max-[526px]:w-[400px] max-[526px]:h-[200px] rounded-lg">
+                <div class="absolute top-16 w-[400px] text-center max-lg:top-10 max-[926px]:top-8 max-md:top-4 max-[526px]:w-[250px] max-[526px]:top-0">
+                  <p class="text-white text-4xl max-[526px]:text-[20px]">Vans</p>
+                  <p class="text-white/70 text-[16px] max-[526px]:text-[11px]">Rent cars as you are comfortable and where
+                    you are comfortable.
                   </p>
                 </div>
               </div>
-
+  
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination "></div>
+            <div class="swiper-button-next text-white max-[526px]:hidden"></div>
+            <div class="swiper-button-prev text-white max-[526px]:hidden"></div>
+            <div class="swiper-pagination"></div>
           </div>
-
+  
           <div
-            class="main__search absolute z-10 bg-white w-[600px] h-[66px] left-[300px] rounded-full shadow-lg flex justify-between items-center top-[95%]">
-
+            class="main__search relative z-10 bg-white w-[600px] h-[66px] mx-auto -translate-y-1/2 rounded-full shadow-lg flex justify-between items-center max-lg:w-[500px] max-md:bottom-[0px] max-md:w-[450px] max-md:h-[50px] max-[526px]:w-[300px] max-[526px]:h-[40px] max-[526px]:bottom-[5px]">
+  
             <input type="search" placeholder="Find the car of your dreams"
               class="w-full border-none rounded-l-full ml-2 focus:ring-0">
-
+  
             <div
-              class="main__search-icon mr-2  w-[70px] h-[58px] flex items-center justify-center bg-[#299764] rounded-full">
+              class="main__search-icon mr-2  w-[70px] h-[58px] flex items-center justify-center bg-[#299764] max-md:w-[60px] max-md:h-[45px] max-[526px]:w-12 max-[526px]:h-9 rounded-full">
               <i class='bx bx-search-alt-2 text-white'></i>
             </div>
-
+  
           </div>
           <!-- Swiper JS -->
           <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
+  
           <!-- Initialize Swiper -->
-
-
+  
+  
         </div>
-
+  
       </div>
-
+  
       </div>
     </section>
     <!-- Main section finished -->
@@ -175,34 +225,34 @@
     <!-- Dreams section started-->
     <section class="dream pb-40">
       <div class="container">
-        <div class="dream__info mt-[133px] w-[500px] mx-auto text-center">
-          <p class="dream__info-title text-4xl font-medium">
+        <div class="dream__info mt-[133px] w-[500px] mx-auto text-center max-md:mt-20 max-[526px]:w-[200px]">
+          <p class="dream__info-title text-4xl max-sm:text-2xl max-[526px]:text-[20px] font-medium">
             Choose the car of your dreams
           </p>
-          <p class="dream__info-text text-[16px] text-[#555555] ">
+          <p class="dream__info-text text-[16px] text-[#555555] max-[526px]:text-[12px]">
             We provide our customers with the most incredible driving emotions. That is why there are only world-class
             cars in our fleet
           </p>
         </div>
-
-        <ul class="dream__menu mt-10 w-[476px] flex mx-auto items-center justify-between">
+  
+        <ul class="dream__menu mt-10 w-[476px] flex mx-auto items-center justify-between max-sm:w-[300px] max-sm:justify-center max-sm:gap-4">
           <li
-            class="dream__menu-item w-[155px] compact h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white">
+            class="dream__menu-item w-[155px] compact h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white max-sm:w-[105px] max-sm:h-10">
             Compact</li>
           <li
-            class="dream__menu-item w-[155px] sport h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white">
+            class="dream__menu-item w-[155px] sport h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white max-sm:w-[105px] max-sm:h-10">
             Sport Cars</li>
           <li
-            class="dream__menu-item w-[155px] vans h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white">
+            class="dream__menu-item w-[155px] vans h-14 flex items-center justify-center rounded-full border border-[#E5E7EA] cursor-pointer hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white max-sm:w-[105px] max-sm:h-10">
             Vans</li>
         </ul>
-
-        <ul class="dream__card mt-5 flex flex-wrap justify-between">
+  
+        <ul class="dream__card mt-5 flex flex-wrap justify-between max-xl:justify-center max-xl:gap-4 max-md:gap-1 ">
           <!-- here card renders   -->
         </ul>
-
+  
         <button type="button"
-          class="view__all-cars bg-[#299764] w-[173px] h-[58px] rounded-full text-white mt-5 ml-[42%]">
+          class="view__all-cars flex items-center justify-center bg-[#299764] w-[173px] h-[58px] rounded-full text-white mt-5 mx-auto">
           Viev all cars
         </button>
       </div>
@@ -211,10 +261,12 @@
 
     <!-- Comment section started -->
     <section class="comment__section bg-[#F5F5F5]  py-[100px] ">
-      <div class="container flex">
-        <div class="comment w-[450px] bg-white">
-          <div class="comment__info flex flex-col px-20 py-16 ">
+      <div class="container flex max-[926px]:flex-col">
 
+        <div class="comment w-[450px] bg-white h-[479px] max-lg:max-w-[350px] max-[926px]:min-w-[90%] max-[926px]:max-h-[300px] max-sm:min-h-[350px] max-sm:w-[300px]">
+          <div class="comment__info flex flex-col px-20 py-16 max-[926px]:flex-row max-sm:flex-col ">
+
+            <div>  
             <div class="comment__info-logo flex items-center gap-4">
               <div
                 class="comment__info--logo-icon bg-white w-5 h-5 rounded-full flex items-center justify-center cursor-pointer">
@@ -223,136 +275,157 @@
               <p class="comment__info--logo-text text-[#4285F4] ">From Google</p>
             </div>
 
-            <p class="comment__info-title w-[280px] text-[38px] ">Hear what the community is saying</p>
-            <hr class="h-1 rounded-full bg-gradient-to-r my-8 from-[#EA4335] to-[#FBBC05] ">
-            <p class="text-[14px] text-[#555555]">More interesting reviews on Instagram</p>
+            <p class="comment__info-title w-[280px] text-[38px] max-lg:text-[28px] max-sm:w-[200px]">Hear what the community is saying</p>
+            </div>
+
+            <hr class="h-1 rounded-full bg-gradient-to-r my-8 from-[#EA4335] to-[#FBBC05] max-[926px]:hidden max-sm:block">
+            
+            <div>
+              <p class="text-[14px] text-[#555555]">More interesting reviews on Instagram</p>
             <div
               class="instagram w-48 h-11 flex items-center justify-center border border-spacing-1 border-red-200 rounded-full cursor-pointer">
               <p class="instagram__link ">Instagram</p>
+            </div>
             </div>
 
 
           </div>
         </div>
 
-        <div class="comment__carusel bg-[#299764] pt-16 pl-5 max-w-full overflow-hidden rounded-r-lg">
+
+
+
+
+
+
+
+
+
+
+
+        <div class="comment__carusel bg-[#299764] pt-16 pl-5 max-w-full overflow-hidden rounded-r-lg max-lg:w-2/3 max-[926px]:w-[90%] max-[926px]:min-h-[400px] max-sm:min-w-[300px] max-sm:min-h-[400px]">
           <!-- Swiper -->
-          <div class="swiper comment__swipper" id="comment__swipper">
-            <div class="swiper-wrapper">
+          <div class="swiper comment__swipper max-sm:comment__swipper-lg" id="comment__swipper">
+            <div class="swiper-wrapper relative">
 
-              <div class="swiper-slide flex-col">
-                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4">
-                  <img src="./images/nguyen.svg" alt="">
-                  <div class="mr-20">
-                    <p class="text-[16px] font-semibold ">Savannah Nguyen</p>
-                    <p class="text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+              <div class="swiper-slide flex-col ">
+                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4 max-[1160px]:w-[280px] max-[926px]:w-[372px] max-sm:w-[200px]">
+                  <img src="./images/nguyen.svg" alt="" class="max-sm:w-[25px]">
+                  <div class="mr-20 max-[1160px]:mr-0">
+                    <p class="text-[16px] font-semibold max-sm:text-[14px]">Savannah Nguyen</p>
+                    <p class="text-[14px] text-[#555555] max-sm:text-[12px]">savannahnguyen@gmail.com</p>
                   </div>
-                  <img src="./images/google.svg" alt="" class="w-[20px]">
+                  <img src="./images/google.svg" alt="" class="w-[20px]  max-sm:w[15px]">
                 </div>
-                <p class="text-[14px] w-[372px] text-left mt-4">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
+                <p class="text-[14px] w-[372px] text-left mt-4 max-[1160px]:w-[300px] max-[926px]:w-[372px] max-sm:w-[200px] max-sm:text-[11px]">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
                   arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
                   sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
                   quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
-                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6">
+                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6 max-[1160px]:w-[300px] max-sm:my-5 max-sm:w-[200px]">
             
-                <div class=" comment__swipper-rate w-[372px] flex gap-3">
-                  <p>Star rating:</p>
+                <div class=" comment__swipper-rate w-[372px] flex gap-3 max-[1160px]:w-[300px] max-sm:w-[200px] max-sm:gap-2 ">
+                  <p class="max-sm:text-[12px]">Star rating:</p>
                   <ul class="flex items-center gap-3">
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                  </ul>
-                </div>
-            
-              </div>
-
-              <div class="swiper-slide flex-col">
-                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4">
-                  <img src="./images/nguyen.svg" alt="">
-                  <div class="mr-20">
-                    <p class="text-[16px] font-semibold ">Savannah Nguyen</p>
-                    <p class="text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
-                  </div>
-                  <img src="./images/google.svg" alt="" class="w-[20px]">
-                </div>
-                <p class="text-[14px] w-[372px] text-left mt-4">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
-                  arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
-                  sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
-                  quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
-                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6">
-            
-                <div class=" comment__swipper-rate w-[372px] flex gap-3">
-                  <p>Star rating:</p>
-                  <ul class="flex items-center gap-3">
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
                   </ul>
                 </div>
             
               </div>
 
-              <div class="swiper-slide flex-col">
-                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4">
-                  <img src="./images/nguyen.svg" alt="">
-                  <div class="mr-20">
-                    <p class="text-[16px] font-semibold ">Savannah Nguyen</p>
-                    <p class="text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+              <div class="swiper-slide flex-col ">
+                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4 max-[1160px]:w-[280px] max-[926px]:w-[372px] max-sm:w-[200px]">
+                  <img src="./images/nguyen.svg" alt="" class="max-sm:w-[25px]">
+                  <div class="mr-20 max-[1160px]:mr-0">
+                    <p class="text-[16px] font-semibold max-sm:text-[14px]">Savannah Nguyen</p>
+                    <p class="text-[14px] text-[#555555] max-sm:text-[12px]">savannahnguyen@gmail.com</p>
                   </div>
-                  <img src="./images/google.svg" alt="" class="w-[20px]">
+                  <img src="./images/google.svg" alt="" class="w-[20px] max-sm:w[15px]">
                 </div>
-                <p class="text-[14px] w-[372px] text-left mt-4">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
+                <p class="text-[14px] w-[372px] text-left mt-4 max-[1160px]:w-[300px] max-[926px]:w-[372px] max-sm:w-[200px] max-sm:text-[11px]">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
                   arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
                   sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
                   quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
-                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6">
+                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6 max-sm:my-5 max-[1160px]:w-[300px] max-sm:w-[200px]">
             
-                <div class=" comment__swipper-rate w-[372px] flex gap-3">
-                  <p>Star rating:</p>
+                <div class=" comment__swipper-rate w-[372px] flex gap-3 max-[1160px]:w-[300px] max-sm:w-[200px] max-sm:gap-2 ">
+                  <p class="max-sm:text-[12px]">Star rating:</p>
                   <ul class="flex items-center gap-3">
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
                   </ul>
                 </div>
             
               </div>
-              <div class="swiper-slide flex-col">
-                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4">
-                  <img src="./images/nguyen.svg" alt="">
-                  <div class="mr-20">
-                    <p class="text-[16px] font-semibold ">Savannah Nguyen</p>
-                    <p class="text-[14px] text-[#555555]">savannahnguyen@gmail.com</p>
+
+              <div class="swiper-slide flex-col ">
+                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4 max-[1160px]:w-[280px] max-[926px]:w-[372px] max-sm:w-[200px]">
+                  <img src="./images/nguyen.svg" alt="" class="max-sm:w-[25px]">
+                  <div class="mr-20 max-[1160px]:mr-0">
+                    <p class="text-[16px] font-semibold max-sm:text-[14px]">Savannah Nguyen</p>
+                    <p class="text-[14px] text-[#555555] max-sm:text-[12px]">savannahnguyen@gmail.com</p>
                   </div>
-                  <img src="./images/google.svg" alt="" class="w-[20px]">
+                  <img src="./images/google.svg" alt="" class="w-[20px] max-sm:w[15px]">
                 </div>
-                <p class="text-[14px] w-[372px] text-left mt-4">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
+                <p class="text-[14px] w-[372px] text-left mt-4 max-[1160px]:w-[300px] max-[926px]:w-[372px] max-sm:w-[200px] max-sm:text-[11px]">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
                   arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
                   sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
                   quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
-                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6">
+                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6 max-sm:my-5 max-[1160px]:w-[300px] max-sm:w-[200px]">
             
-                <div class=" comment__swipper-rate w-[372px] flex gap-3">
-                  <p>Star rating:</p>
+                <div class=" comment__swipper-rate w-[372px] flex gap-3 max-[1160px]:w-[300px] max-sm:w-[200px] max-sm:gap-2 ">
+                  <p class="max-sm:text-[12px]">Star rating:</p>
                   <ul class="flex items-center gap-3">
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
-                    <li> <img src="./images/star.svg" alt="star"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
                   </ul>
                 </div>
             
               </div>
+
+              <div class="swiper-slide flex-col ">
+                <div class="comment__swipper-title w-[372px] flex items-center justify-between gap-4 max-[1160px]:w-[280px] max-[926px]:w-[372px] max-sm:w-[200px]">
+                  <img src="./images/nguyen.svg" alt="" class="max-sm:w-[25px]">
+                  <div class="mr-20 max-[1160px]:mr-0">
+                    <p class="text-[16px] font-semibold max-sm:text-[14px]">Savannah Nguyen</p>
+                    <p class="text-[14px] text-[#555555] max-sm:text-[12px]">savannahnguyen@gmail.com</p>
+                  </div>
+                  <img src="./images/google.svg" alt="" class="w-[20px] max-sm:w[15px]">
+                </div>
+                <p class="text-[14px] w-[372px] text-left mt-4 max-[1160px]:w-[300px] max-[926px]:w-[372px] max-sm:w-[200px] max-sm:text-[11px]">Sagittis sed tortor, elementum vitae varius sodales consectetur. Vitae
+                  arcu ut morbi bibendum ullamcorper feugiat. Venenatis hendrerit cursus egestas sit ornare nunc vulputate aliquam
+                  sapien. Pulvinar nunc consectetur nibh consectetur mollis mauris est mauris amet. Sed hac vehicula id et dui morbi
+                  quam pulvinar condimentum. Senectus sed varius interdum nunc, arcu vulputate massa.</p>
+                <hr class="bg-[#E5E7EA] rounded-full  w-[372px] my-6 max-sm:my-5 max-sm:w-[200px] max-[1160px]:w-[300px]">
+            
+                <div class=" comment__swipper-rate w-[372px] flex gap-3 max-[1160px]:w-[300px] max-sm:w-[200px] max-sm:gap-2 ">
+                  <p class="max-sm:text-[12px]">Star rating:</p>
+                  <ul class="flex items-center gap-3">
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                    <li> <img src="./images/star.svg" alt="star" class="max-sm:w-[15px]"></li>
+                  </ul>
+                </div>
+            
+              </div>
+
+              
+
+             
       
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination hidden"></div>
           </div>
 
           <!-- Swiper JS -->
@@ -376,13 +449,13 @@
           <li class="brand__list-item">
             <img src="./images/toyota-logo.svg" alt="toyota">
           </li>
-          <li class="brand__list-item">
-            <img src="./images/dodge-logo.svg" alt="dodge">
+          <li class="brand__list-item max-sm:hidden">
+            <img src="./images/dodge-logo.svg" alt="dodge" class="">
           </li>
-          <li class="brand__list-item">
+          <li class="brand__list-item max-md:hidden">
             <img src="./images/hyundai-logo.svg" alt="hyundai">
           </li>
-          <li class="brand__list-item">
+          <li class="brand__list-item max-md:hidden">
             <img src="./images/jeep-logo.svg" alt="jeep">
           </li>
         </ul>
@@ -394,45 +467,45 @@
     <section class="service">
       <div class="container">
         <div class="srvice__inf flex flex-col items-center text-center justify-center pb-10">
-          <p class="service__info-title text-4xl ">Unparalleled service</p>
-          <p class="seqrvice__info-text w-[600px] text-[16px] text-[#555555]">Whether you are looking for Newark Airport car rental, an insurance replacement vehicle or minivan to take on vacation Car rental has it all.</p>
+          <p class="service__info-title text-4xl max-md:text-2xl">Unparalleled service</p>
+          <p class="seqrvice__info-text w-[600px] text-[16px] text-[#555555] max-md:w-[400px] max-md:text-[12px]">Whether you are looking for Newark Airport car rental, an insurance replacement vehicle or minivan to take on vacation Car rental has it all.</p>
         </div>
 
-        <ul class="service__card flex flex-wrap gap-4 justify-between">
-          <li class="service__card--item w-[590px] h-[216px] p-10 bg-[#F5F5F5] rounded-3xl flex justify-between">
+        <ul class="service__card flex flex-wrap gap-4 justify-between max-lg:justify-center">
+          <li class="service__card--item w-[590px] h-[216px] p-10 bg-[#F5F5F5] rounded-3xl flex justify-between max-xl:w-[500px] max-[1056px]:w-[400px]">
             <div class="service__card--item-title">
-              <p class="text-3xl w-52">Book online, pay online</p>
-              <p class="text-[16px] w-80 text-[#555555]">Complete the booking process A-Z, with our easy online system</p>
+              <p class="text-3xl w-52 max-[1056px]:text-[20px] max-[1056px]:w-[200px]"> Book online, pay online</p>
+              <p class="text-[16px] w-80 text-[#555555] max-[1056px]:w-[200px]">Complete the booking process A-Z, with our easy online system</p>
             </div>
             <div class="service__card--item-img">
               <img src="./images/servie-computer.svg" alt="">
             </div>
           </li>
 
-          <li class="service__card--item w-[590px] h-[216px] p-10 bg-[#F5F5F5] rounded-3xl flex justify-between">
+          <li class="service__card--item w-[590px] h-[216px] p-10 bg-[#F5F5F5] rounded-3xl flex justify-between max-xl:w-[500px] max-[1056px]:w-[400px]">
             <div class="service__card--item-title">
-              <p class="text-3xl w-52">Guaranteed car reservation</p>
-              <p class="text-[16px] w-80 text-[#555555]">When you book with Car rental, you can be confident your car will be waiting for you</p>
+              <p class="text-3xl w-52 max-[1056px]:text-[20px] max-[1050px]:w-[200px]">Guaranteed car reservation</p>
+              <p class="text-[16px] w-80 text-[#555555] max-[1056px]:w-[200px]">When you book with Car rental, you can be confident your car will be waiting for you</p>
             </div>
             <div class="service__card--item-img">
               <img src="./images/service-confident.svg" alt="">
             </div>
           </li>
 
-          <li class="service__card--item w-[590px] h-[216px] p-10 bg-[#F5F5F5] rounded-3xl flex justify-between">
+          <li class="service__card--item w-[590px] h-[216px] p-10 bg-[#F5F5F5] rounded-3xl flex justify-between max-xl:w-[500px] max-[1056px]:w-[400px]">
             <div class="service__card--item-title">
-              <p class="text-3xl w-52">Unparalleled customer service</p>
-              <p class="text-[16px] w-80 text-[#555555]">We're here to help. We pride ourselves in our customer service</p>
+              <p class="text-3xl w-52 max-[1056px]:text-[20px] max-[1050px]:w-[200px]">Unparalleled customer service</p>
+              <p class="text-[16px] w-80 text-[#555555] max-[1056px]:w-[200px]">We're here to help. We pride ourselves in our customer service</p>
             </div>
             <div class="service__card--item-img">
               <img src="./images/service-user.svg" alt="">
             </div>
           </li>
 
-          <li class="service__card--item w-[590px] h-[216px] p-10 bg-[#F5F5F5] rounded-3xl flex justify-between">
+          <li class="service__card--item w-[590px] h-[216px] p-10 bg-[#F5F5F5] rounded-3xl flex justify-between max-xl:w-[500px] max-[1056px]:w-[400px]">
             <div class="service__card--item-title">
-              <p class="text-3xl w-52">No reservation or booking fees</p>
-              <p class="text-[16px] w-80 text-[#555555]">No cancellation fees if cancelled 24 hours prior to booking time</p>
+              <p class="text-3xl w-52 max-[1056px]:text-[20px] max-[1050px]:w-[200px]">No reservation or booking fees</p>
+              <p class="text-[16px] w-80 text-[#555555] max-[1056px]:w-[200px]">No cancellation fees if cancelled 24 hours prior to booking time</p>
             </div>
             <div class="service__card--item-img">
               <img src="./images/service-booking.svg" alt="">
@@ -444,41 +517,193 @@
     </section>
     <!-- Service section finished -->
 
+     <!-- Rental section started -->
+     <section class="rental py-40">
+      <div class="container ">
+        <div class="rental__wrapper relative p-10 min-h-[500px] rounded-lg border flex max-[926px]:overflow-hidden">
+          <div class="rental__about w-[55%] flex flex-col justify-between max-[926px]:w-[70%] max-md:w-full">
+            <div class="rental__about--info">
+              <p class="rental__about--info-title text-4xl">
+                Car rental keeps you safe
+              </p>
+              <p class="rental__about--info-text text-[16px] text-[#555555]">
+                The safety of our employees and renters is our number one priority. In addition to being confident your vehicle is cleaned and sanitized every time you rent, you can also feel confident that we will take every opportunity to enhance the health and safety measures currently practiced in our operations.
+              </p>
+            </div>
 
+            <ul class="rental__about--card flex pt-24 justify-between max-md:flex-wrap">
+              <li class="rental__about--card-item flex flex-col justify-between rounded-lg bg-[#F5F5F5] w-[200px] h-36 p-4 max-[926px]:w-[150px]">
+                <div class="rental__about--card-img flex justify-end">
+                  <img src="./images/rental-sanitizied.svg" alt="rental">
+                </div>
 
+                <p class="rental__bout--card-text text-[16px]">
+                  Every car is thoroughly sanitized and cleaned
+                </p>
+              </li>
 
+              <li class="rental__about--card-item flex flex-col justify-between rounded-lg bg-[#F5F5F5] w-[200px] h-36 p-4 max-[926px]:w-[150px]">
+                <div class="rental__about--card-img flex justify-end">
+                  <img src="./images/rental-heatr.svg" alt="rental">
+                </div>
 
+                <p class="rental__bout--card-text text-[16px]">
+                  All of our employees wear masks
+                </p>
+              </li>
+              <li class="rental__about--card-item flex flex-col justify-between rounded-lg bg-[#F5F5F5] w-[200px] h-36 p-4 max-[926px]:w-[150px]">
+                <div class="rental__about--card-img flex justify-end">
+                  <img src="./images/rental-protocol.svg" alt="rental">
+                </div>
 
+                <p class="rental__bout--card-text text-[16px]">
+                  We stay up to date with all protocol from the CDC
+                </p>
+              </li>
+        
+            </ul>
 
-    <div class="h-96"></div>
+          </div>
 
+          <div class=" min-[926px]:hidden absolute -top-36 -right-36 w-[300px] h-[300px] bg-[#299764] rounded-full ">
 
+          </div>
 
+          <div class="rental__imgwrapper w-[45%] flex flex-col items-center max-[926px]:hidden">
+            <div class="rental__imgwrapper-ellipse w-[300px] h-[300px] bg-[#299764] rounded-full">
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="rental__imgwrapper-img absolute bottom-0 max-[926px]:hidden">
+              <img src="./images/rental-img.png" alt="" >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Rental section finished -->
 
   </main>
+
+
+  <!-- footer started -->
+  <footer class="footer border-t-2 py-10">
+    <div class="container flex justify-between">
+
+      <!-- <div class="footer  pb-10"> -->
+        
+        <!-- footer logo -->
+        
+
+
+        <div class="footer__left flex flex-col items-start">
+
+          <div class="footer__left--info w-[240px] ">
+            <img src="./images/Logo.png" alt="">
+            <p class="footer-firstsection--info-text pt-2 text-[12px] text-[#555555]">
+              Car rental offers a wide range of cars available for rent in Newark EWR Airport NJ. We pride ourselves in our customer service, and hassle-free renting experience.
+            </p>
+          </div>
+
+          <p class="footer__seconsection-title text-[16px] w-[150px] font-medium mt-[105px]">© 2022 Car rental Terms & Conditions</p>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="footer__right w-[70%]">
+          
+        <div class="footer__right--up flex justify-between pb-10">
+          <!-- footer main -->
+        <!-- <div class=""> -->
+          <ul class="footer__list">
+            <p class="footer__firstsection--main-title text-[#16px] font-semibold pb-2">Main</p>
+            <li class="cursor-pointer hover:text-black hover:underline">My Bookings</li>
+            <li class="cursor-pointer hover:text-black hover:underline">Reservation</li>
+          </ul>
+        <!-- </div> -->
+
+        <!-- footer category -->
+        <!-- <div class="footer__firstsection--categories"> -->
+          <ul class="footer__list">
+            <p class="footer__categories text-[#16px] font-semibold pb-2">Categories</p>
+            <li class="cursor-pointer hover:text-black hover:underline">Compact</li>
+            <li class="cursor-pointer hover:text-black hover:underline">Sports Cars</li>
+            <li class="cursor-pointer hover:text-black hover:underline">Vans</li>
+          </ul>
+        <!-- </div> -->
+
+        <!-- footer company -->
+        <!-- <div class="footer__firstsection--company"> -->
+          <ul class="footer__list">
+            <p class="footer__firstsection--company-title text-[#16px] font-semibold pb-2">Company</p>
+            <li class="cursor-pointer hover:text-black hover:underline">About Us</li>
+            <li class="cursor-pointer hover:text-black hover:underline">Careers</li>
+            <li class="cursor-pointer hover:text-black hover:underline">News</li>
+            <li class="cursor-pointer hover:text-black hover:underline">Contant Us</li>
+          </ul>
+        <!-- </div> -->
+
+        <!-- footer location -->
+        <!-- <div class="footer__firstsection--location"> -->
+          <ul class="footer__list">
+            <p class="footer__title font-semibold pb-2">Our Location</p>
+            <li class="cursor-pointer hover:text-black hover:underline">2118 Thornridge Cir. Syracuse</li>
+            <li class="cursor-pointer hover:text-black hover:underline">4140 Parker Rd. Allentown</li>
+            <li class="cursor-pointer hover:text-black hover:underline">4517 Washington Ave.</li>
+          </ul>
+        <!-- </div> -->
+
+        </div>
+
+        <hr class="">
+
+        <div class="footer__right--down flex justify-between pt-10">
+          <!-- <div class="footer__secondsection "> -->
+            <!-- <div> -->
+              <ul class="footer__list">
+                <p class="text-[16px] font-semibold pb-2">Contact</p>
+                <li class="cursor-pointer hover:text-black hover:underline">+1 855 420 0000</li>
+                <li class="cursor-pointer hover:text-black hover:underline">carrental@gmail.com</li>
+              </ul>
+            <!-- </div> -->
+    
+            <!-- <div> -->
+              <ul class="footer__list">
+                <p class="text-[16px] font-semibold pb-2">Hours of operation</p>
+                <li class="cursor-pointer hover:text-black hover:underline">8:00 - 21:00 Mon-Sat </li>
+                <li class="cursor-pointer hover:text-black hover:underline">9:00 - 15:00 Sundays</li>
+              </ul>
+            <!-- </div> -->
+    
+            <div>
+              <p class="text-[16px] font-semibold pb-4">Social network</p>
+              <ul class="footer__social flex gap-4">
+                <li class="footer__social-logo footer__insta w-10 h-10 bg-black rounded-full flex items-center justify-center cursor-pointer"><img src="./images/instagram-logo.svg" alt=""></li>
+                <li class="footer__social-logo w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-[#55ACE3] cursor-pointer"><img src="./images/twitter-logo.svg" alt=""></li>
+                <li class="footer__social-logo w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-[#0B84EE] cursor-pointer"><img src="./images/facebook-logo.svg" alt=""></li>
+                <li class="footer__social-logo w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-[#48C95F] cursor-pointer"><img src="./images/whatsapp-logo.svg" alt=""></li>
+              </ul>
+            </div>
+    
+            <a href="#" class="scrillup w-16 h-16 bg-[#299764] rounded-full flex items-center justify-center hover:bg-[#077743] active:bg-[#F5F5F5]  cursor-pointer active:text-black">
+              <i class='bx bx-up-arrow-alt text-white text-[30px] active:text-black'></i>
+            </a>
+        </div>
+
+      </div>
+
+      
+      </div>
+        <!-- </div> -->
+    </div>
+  </footer>
+  <!-- footer finished -->
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
